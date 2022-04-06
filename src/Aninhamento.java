@@ -15,6 +15,7 @@ public class Aninhamento extends JFrame{
 		botao.addActionListener(new ListenerAninhado());
 		botao.addActionListener(new ActionListener() {
 
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Aninhada: " +botao.getText());
@@ -43,6 +44,10 @@ public class Aninhamento extends JFrame{
 	public static void main(String[] args)  {
 		
 		Aninhamento janela = new Aninhamento();
+		
+		Aninhamento.ListenerAninhado listener = janela.new ListenerAninhado();
+				
+		
 
 	}
 
