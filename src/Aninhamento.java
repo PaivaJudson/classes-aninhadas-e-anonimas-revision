@@ -13,6 +13,17 @@ public class Aninhamento extends JFrame{
 		
 		botao = new JButton("Ok");
 		botao.addActionListener(new ListenerAninhado());
+		botao.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Aninhada: " +botao.getText());
+			}
+			
+		});
+		
+		
+		getContentPane().add(botao);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(300, 300);
